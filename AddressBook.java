@@ -182,4 +182,8 @@ public class AddressBook {
 	public long viewCountOfContactsFromSpecificState(String stateName) {
 		return person.stream().filter(p -> p.getState().equalsIgnoreCase(stateName)).count();
 	}
+	
+	public void sortContactByPersonName() {
+		 person.stream().sorted((s1,s2) -> s1.getFirstName().compareTo(s2.getFirstName())).forEach(System.out::println);
+	}
 }
