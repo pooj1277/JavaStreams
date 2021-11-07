@@ -71,7 +71,7 @@ public class AddressBook {
 		System.out.println("Enter your Email-ID : ");
 		String email = scanner.nextLine();
 		System.out.println("Enter your Zip code : ");
-		int zip = scanner.nextInt();
+		String zip = scanner.nextLine();
 		System.out.println("Enter your Mobile Number : ");
 		long mNumber = scanner.nextLong();
 		scanner.nextLine();
@@ -121,7 +121,7 @@ public class AddressBook {
 					break;
 				case 6:
 					System.out.println("Enter Updated Zip Code : ");
-					person.get(i).setZip(scanner.nextInt());
+					person.get(i).setZip(scanner.nextLine());
 					scanner.nextLine();
 					break;
 				case 7:
@@ -185,5 +185,17 @@ public class AddressBook {
 	
 	public void sortContactByPersonName() {
 		 person.stream().sorted((s1,s2) -> s1.getFirstName().compareTo(s2.getFirstName())).forEach(System.out::println);
+	}
+	
+	public void sortContactByPersonCity() {
+		 person.stream().sorted((s1,s2) -> s1.getCity().compareTo(s2.getCity())).forEach(System.out::println);
+	}
+	
+	public void sortContactByPersonState() {
+		 person.stream().sorted((s1,s2) -> s1.getState().compareTo(s2.getState())).forEach(System.out::println);
+	}
+	
+	public void sortContactByPersonZipCode() {
+		 person.stream().sorted((s1,s2) -> s1.getZip().compareTo(s2.getZip())).forEach(System.out::println);
 	}
 }

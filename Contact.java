@@ -1,10 +1,10 @@
 package com.bridgelabz.JavaStream;
 public class Contact {
 	private String firstName, lastName, city, state, email;
-	private int zip;
+	private String zip;
 	private long phoneNumber;
 
-	public Contact(String firstName, String lastName, String city, String state, String email, int zip,
+	public Contact(String firstName, String lastName, String city, String state, String email, String zip,
 			long phoneNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -35,7 +35,7 @@ public class Contact {
 		return email;
 	}
 
-	public int getZip() {
+	public String getZip() {
 		return zip;
 	}
 
@@ -63,7 +63,7 @@ public class Contact {
 		this.email = email;
 	}
 
-	public void setZip(int zip) {
+	public void setZip(String zip) {
 		this.zip = zip;
 	}
 
